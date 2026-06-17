@@ -12,7 +12,7 @@
         const rect = calc.getBoundingClientRect();
         // hide nav once the calculator top passes under the nav bar,
         // show again once its bottom has scrolled past
-        hidden = rect.top <= 0 && rect.bottom > 80;
+        hidden = rect.top <= 0;
       }
     };
     window.addEventListener('scroll', onScroll, { passive: true });

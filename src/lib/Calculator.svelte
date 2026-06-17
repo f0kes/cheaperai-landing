@@ -67,7 +67,7 @@
   }
 </script>
 
-<section id="calculator" class="section">
+<section id="calculator" class="section calc-section">
   <div class="container">
     <div class="top-row">
       <div class="header-col">
@@ -221,6 +221,14 @@
 </section>
 
 <style>
+  .calc-section {
+    padding-top: 90px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .calc-section > .container { width: 100%; }
+
   .top-row {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -306,10 +314,10 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 28px;
+    padding: 20px;
   }
 
-  .field { margin-bottom: 26px; }
+  .field { margin-bottom: 18px; }
   .field-top {
     display: flex;
     justify-content: space-between;
@@ -474,11 +482,11 @@
   }
 
   /* Plans */
-  .plans-list { display: flex; flex-direction: column; gap: 16px; }
+  .plans-list { display: flex; flex-direction: column; gap: 10px; }
   .plan-card {
     position: relative;
-    padding: 22px;
-    border-radius: 14px;
+    padding: 14px 18px;
+    border-radius: 12px;
     border: 1px solid var(--border);
     background: var(--surface-2);
     transition: border-color 0.3s, box-shadow 0.3s, opacity 0.3s, transform 0.3s;
@@ -506,9 +514,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
   }
-  .plan-name { font-size: 17px; font-weight: 700; }
+  .plan-name { font-size: 15px; font-weight: 700; }
   .plan-tag {
     font-family: var(--mono);
     font-size: 11px;
@@ -518,7 +526,7 @@
     background: rgba(255,255,255,0.04);
   }
   .plan-rate {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -536,47 +544,18 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 6px 0;
     border-top: 1px dashed var(--border);
     border-bottom: 1px dashed var(--border);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
-  .cost-label { font-size: 12px; color: var(--text-muted); }
+  .cost-label { font-size: 11px; color: var(--text-muted); }
   .cost-val {
     font-family: var(--mono);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text);
   }
   .cost-val.baseline { color: var(--text-dim); text-decoration: line-through; text-decoration-color: var(--text-muted); }
-  .plan-blurb { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
-
-  .save-block {
-    margin-top: 16px;
-    padding: 16px 18px;
-    border-radius: 10px;
-    background: rgba(16,185,129,0.08);
-    border: 1px solid rgba(16,185,129,0.25);
-  }
-  .save-label {
-    font-family: var(--mono);
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent-bright);
-    margin-bottom: 4px;
-  }
-  .save-value {
-    font-family: var(--mono);
-    font-size: clamp(28px, 4vw, 38px);
-    font-weight: 800;
-    color: var(--accent);
-    letter-spacing: -0.02em;
-  }
-  .save-pct {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--accent-bright);
-    margin-top: 2px;
-  }
+  .plan-blurb { font-size: 12px; color: var(--text-dim); line-height: 1.4; margin: 0; }
 </style>
